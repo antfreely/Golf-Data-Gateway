@@ -7,6 +7,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * Unit test class for {@link EpochMapperV1}.
+ */
 public class EpochMapperV1Test {
   @Test
   @DisplayName("Should map a String version of a date to an epoch equivalent, in seconds")

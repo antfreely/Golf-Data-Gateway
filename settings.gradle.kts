@@ -1,6 +1,7 @@
 rootProject.name = "golf-data-gateway"
 
 pluginManagement {
+    // Plugin versions from gradle.properties
     val springBootPluginVersion: String by settings
     val springDependencyManagementPluginVersion: String by settings
 

@@ -1,6 +1,5 @@
 package com.imgarena.golf.data.gateway.integration.util;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.imgarena.golf.data.gateway.GolfDataGatewayApplication;
 import com.imgarena.golf.data.gateway.db.GolfTournamentRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,7 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 /**
  * Base Integration Test class for all integration tests to extend so that the Spring Context is reused and not dirtied.
  */
-@SpringBootTest(classes = {GolfDataGatewayApplication.class, IntegrationTestConfiguration.class})
+@SpringBootTest(classes = {GolfDataGatewayApplication.class})
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
 public class IntegrationTestBase {

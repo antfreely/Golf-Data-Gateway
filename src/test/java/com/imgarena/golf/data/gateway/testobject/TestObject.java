@@ -1,8 +1,5 @@
 package com.imgarena.golf.data.gateway.testobject;
 
-import java.util.Random;
-import java.util.UUID;
-
 /**
  * Class used to help create objects to be used in tests.
  *
@@ -17,11 +14,4 @@ public abstract class TestObject<T> {
 
   protected abstract void setInitialFieldValues();
 
-  protected String randomUuidString() {
-    return UUID.randomUUID().toString();
-  }
-
-  protected int getRandomInt() {
-    return new Random().nextInt();
-  }
 }

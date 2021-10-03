@@ -8,6 +8,7 @@ plugins {
 group = "com.imgarena"
 version = "0.0.1-SNAPSHOT"
 
+// Dependency versions from gradle.properties
 val lombokVersion: String by project
 
 java {

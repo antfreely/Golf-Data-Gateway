@@ -1,6 +1,5 @@
 package com.imgarena.golf.data.gateway.api.v1;
 
-import com.imgarena.golf.data.gateway.db.GolfTournament;
 import com.imgarena.golf.data.gateway.db.GolfTournamentRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,8 +34,7 @@ public class GolfTournamentControllerV1 {
       @RequestHeader("DataSource") String dataSource
   ) {
     log.info("Received message from {}", dataSource);
-    GolfTournament golfTournament = golfTournamentDtoV1.toDomain(dataSource);
-    golfTournamentRepository.save(golfTournament);
+    golfTournamentRepository.save(golfTournamentDtoV1.toDomain(dataSource));
     return ResponseEntity.ok().build();
   }
 }

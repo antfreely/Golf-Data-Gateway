@@ -6,8 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.With;
 
-import java.time.LocalDate;
-
 /**
  * Test object class for {@link GolfTournamentDtoV1}.
  */

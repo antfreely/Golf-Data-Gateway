@@ -1,7 +1,6 @@
 package com.imgarena.golf.data.gateway.integration.api;
 
 import com.imgarena.golf.data.gateway.integration.util.IntegrationTestBase;
-import com.imgarena.golf.data.gateway.testobject.GolfTournamentDtoV2TestObject;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.MediaType;

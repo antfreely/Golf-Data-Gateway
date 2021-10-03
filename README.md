@@ -19,7 +19,7 @@ Build the jar file by executing the following:
 
 Run the jar file by executing the following:
 
-`jar `
+`java -jar golf-data-gateway-0.0.1-SNAPSHOT.jar`
 
 ## Send REST calls
 
@@ -28,6 +28,8 @@ Run the jar file by executing the following:
 In Postman, send a `POST` request to the endpoint:
 
 `http://localhost:8080/v1/golf-tournaments`
+
+With a header value filled in for header, `DataSource`
 
 With a request body with the following schema:
 
@@ -49,6 +51,8 @@ With a request body with the following schema:
 In Postman, send a `POST` request to the endpoint:
 
 `http://localhost:8080/v2/golf-tournaments`
+
+With a header value filled in for header, `DataSource`
 
 With a request body with the following schema:
 
@@ -72,7 +76,16 @@ With a request body with the following schema:
 As long as the data source has enough information to use either endpoint, the new data source can use the
 existing endpoints and will just have to be given a new value to fill in the `DataSource` header as part of the request
 
-## Need for a new endpoint
+## Need for a new endpoint and fields
 
-If there is a need for a new endpoint
+If there is a need for a new endpoint, a new `v3` package can be made where the controller, DTO and mappers can live
+
+Since the model follows the Builder pattern, it won't disrupt the other controllers which are mapping their DTos to the
+domain model
+
+## Changing Database implementations
+
+Since JPA and Spring are being used, SQL database implementations can be injected via configuration.
+
+Currently, since there isn't an implementation, the default is an in memory H2 database
 
