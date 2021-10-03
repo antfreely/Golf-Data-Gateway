@@ -19,7 +19,7 @@ Build the jar file by executing the following:
 
 Run the jar file by executing the following:
 
-`java -jar golf-data-gateway-0.0.1-SNAPSHOT.jar`
+`java -jar build/libs/golf-data-gateway-0.0.1-SNAPSHOT.jar`
 
 ## Send REST calls
 
