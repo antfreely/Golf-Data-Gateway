@@ -76,16 +76,13 @@ With a request body with the following schema:
 As long as the data source has enough information to use either endpoint, the new data source can use the
 existing endpoints and will just have to be given a new value to fill in the `DataSource` header as part of the request
 
-## Need for a new endpoint and fields
+## Need for a new endpoint
 
-If there is a need for a new endpoint, a new `v3` package can be made where the controller, DTO and mappers can live
-
-Since the model follows the Builder pattern, it won't disrupt the other controllers which are mapping their DTos to the
-domain model
+If there is a need for a new endpoint, a new `v3` package can be made where the controller, DTO and mappers can live.
+Other than a new Controller and DTO, the rest of the flow should remain unchanged.
 
 ## Changing Database implementations
 
 Since JPA and Spring are being used, SQL database implementations can be injected via configuration.
 
-Currently, since there isn't an implementation, the default is an in memory H2 database
-
+Currently, the default is an in memory H2 database since there isn't an implementation defined
